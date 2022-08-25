@@ -9,3 +9,7 @@ int rd()
     rem = (int)(rand()%6) + 1;
 	while(rem==0);
 }
+int main (void)
+{
+    
+}
