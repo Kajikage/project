@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <time.h>
+#include "test.c"
 int rd()
 {
     int rem;
@@ -29,10 +30,10 @@ int main (void)
 		switch(ch)
 		{
 		case '1':dice=rd();
-		printf(" you pressed 1\n");
+		printf(" player 1 is playing \n");
 				break;
 		case '2':dice=rd();
-			printf(" you pressed 2\n");
+			printf("player 2 is playing \n");
 			break;
 		case '3':exit(0);
 			break;

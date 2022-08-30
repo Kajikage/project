@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-int main (void)
+int display_table (void)
 {
     int i,j,t,c,sft=0,diceres;
     for(i=10;i>0;i--)
