@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-void displaychart(int curp,char player[2])
+void displaychart(int position,char player[2])
 {
     int i,j,t,c,sft=0,table;
     for(i=10;i>0;i--)
@@ -13,7 +13,7 @@ void displaychart(int curp,char player[2])
 			{
 				table=(i*j)+(t*c++);
 
-				if(curp==table)
+				if(position==table)
 					printf("%s\t",player);
 				else
 				printf("%d\t",table);
@@ -28,7 +28,7 @@ void displaychart(int curp,char player[2])
 			{
 				table=(i*j)+(t*c--);
 
-				if(curp==table)
+				if(position==table)
 					printf("%s\t",player);
 				else
 					printf("%d\t",table);

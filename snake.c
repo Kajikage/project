@@ -38,28 +38,28 @@ int main (void)
 						// for snakes
 						if(position_1==99)
 						{
-						displaychart(1,"-P1-");
+							displaychart(1,"-P1-");
 						}
 						if(position_1==65)
 						{
-						displaychart(40,"-P1-");
+							displaychart(40,"-P1-");
 						}
 						if(position_1==25)
 						{
-						displaychart(9,"-P1-");
+							displaychart(9,"-P1-");
 						}
 						// for ladders
 						if(position_1==70)
 						{
-						displaychart(93,"-P1-");
+							displaychart(93,"-P1-");
 						}
 						if(position_1==60)
 						{
-						displaychart(83,"-P1-");
+							displaychart(83,"-P1-");
 						}
 						if(position_1==13)
 						{
-						displaychart(42,"-P1-");
+							displaychart(42,"-P1-");
 						}
 						else{
 							displaychart(position_1,"-P1-");
@@ -72,57 +72,58 @@ int main (void)
 						printf("Range exceeded of Player 1.\n");
 						displaychart(position_1,"-P1-");
 					}
-					printf("Player 2 position is %d\n\n",cur_pos2);
+					printf("Player 2 position is %d\n\n",position_2);
 					break;
 		case '2':dice=random();
 		printf("player 2 is playing \n");
-
-					cur_pos2=dice+cur_pos2;
-					if(cur_pos2<101){
-						if(cur_pos2==99)	//snake
+		system("cls");
+		position_2=dice+position_2;
+					if(position_2<101)
+					{
+						// for snakes
+						if(position_2==99)	
 						{
-						displaychart(1,"$-P2-");
+							displaychart(1,"$-P2-");
 						}
-						if(cur_pos2==65)	//snake
+						if(position_2==65)	
 						{
-						displaychart(40,"-P2-");
+							displaychart(40,"-P2-");
 						}
-						if(cur_pos2==25)	//snake
+						if(position_2==25)	
 						{
-						displaychart(9,"-P2-");
+							displaychart(9,"-P2-");
 						}
-						if(cur_pos2==70)	//ladder
+						// for ladders
+						if(position_2==70)	
 						{
-						displaychart(93,"-P2-");
+							displaychart(93,"-P2-");
 						}
-						if(cur_pos2==60)	//ladder
+						if(position_2==60)	
 						{
-						displaychart(83,"-P2-");
+							displaychart(83,"-P2-");
 						}
-						if(cur_pos2==13) 	//ladder
+						if(position_2==13) 
 						{
-						displaychart(42,"-P2-");
+							displaychart(42,"-P2-");
 						}
-						else{
-							displaychart(cur_pos2,"-P2-");
+						else
+						{
+							displaychart(position_2,"-P2-");
 						}
 						printf("\t\t\t\tDice = %d\n",dice);
 					}
-						else
+					else
 					{
-						cur_pos2=cur_pos2-dice;
+						position_2=position_2-dice;
 						printf("Range exceeded of Player 2.\n");
-						displaychart(cur_pos2,"-P2-");
+						displaychart(position_2,"-P2-");
 					}
-					printf("Player 1 position is %d\n\n",cur_pos1);
-
-
-			
-			break;
+					printf("Player 1 position is %d\n\n",position_1);
+					break;
 		case '3':exit(0);
-			break;
+		break;
 		}
 
     }
-	}
+}
 
