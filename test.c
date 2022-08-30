@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-int display_table (void)
+void displaychart(int curp,char player[4])
 {
     int i,j,t,c,sft=0,diceres;
     for(i=10;i>0;i--)
