@@ -1,19 +1,19 @@
 #include<stdio.h>
 #include<stdlib.h>
-void displaychart(int position,char player[2])
+int main()
 {
-    int i,j,x,y,row=0,table;
-	
+    int i,j,t,c,row=0,table;
+    int position;
+    char player[2];
     for(i=10;i>0;i--)
 	{
-		x=i-1;
+		t=i-1;
 		if((row%2) == 0)
 		{
-			y=0;
+			c=0;
 			for(j=10;j>=1;j--)
 			{
-				table=(i*j)+(x*y++);
-				
+				table=(i*j)+(t*c++);
 
 				if(position==table)
 					printf("%s\t",player);
@@ -25,10 +25,10 @@ void displaychart(int position,char player[2])
 		}
 		else
 		{
-			y=9;
+			c=9; 
 			for(j=1;j<=10;j++)
 			{
-				table=(i*j)+(x*y--);
+				table=(i*j)+(t*c--);
 
 				if(position==table)
 					printf("%s\t",player);
