@@ -5,11 +5,11 @@
 int random() // random dice
 {
     int rem;
-	A:rem=rand()%7;
-	if(rem==0)
-		goto A;
-	else
-		return rem;
+    srand(time(0));
+    do
+    rem = (int)(rand()%6) + 1;
+	while(rem==0);
+	return rem;
 }
 int main (void)
 {
