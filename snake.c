@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include <time.h>
 #include "test.c"
-int random() // random dice
+int rd() // random dice
 {
     int rem;
     srand(time(0));
@@ -32,10 +32,10 @@ int main (void)
 
 		switch(ch)
 		{
-		case '1':dice=random();
+		case '1':dice=rd();
 		
 		system("cls");
-		printf("2player 1 is playing \n");
+		printf("player 1 is playing \n");
 	
 		position_1=dice+position_1;
 					if(position_1<101)
@@ -79,7 +79,7 @@ int main (void)
 					}
 					printf("Player 2 position is %d\n\n",position_2);
 					break;
-		case '2':dice=random();
+		case '2':dice=rd();
 		printf("player 2 is playing \n");
 		system("cls");
 		position_2=dice+position_2;
