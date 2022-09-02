@@ -25,7 +25,7 @@ int main (void)
 		printf("[1] Player 1 plays\n");
 		printf("[2] Player 2 plays\n");
 		printf("[3] Exit\n");
-		scanf("%s",&ch);
+		scanf("%c",&ch);
         printf("\n\n\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n");
         printf("\t\t\t    Snakes And Ladders\n");
         printf("\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\xcd\n");
@@ -43,31 +43,39 @@ int main (void)
 						// for snakes
 						if(position_1==99)
 						{
-							displaychart(1,"-P1-");
+							position_1 = 1;
+							displaychart(position_1,position_2);
 						}
 						if(position_1==65)
 						{
-							displaychart(40,"-P1-");
+							position_1 = 40;
+							displaychart(position_1,position_2);
 						}
 						if(position_1==25)
 						{
-							displaychart(9,"-P1-");
+							position_1 = 9;
+							displaychart(position_1,position_2);
 						}
 						// for ladders
 						if(position_1==70)
 						{
-							displaychart(93,"-P1-");
+							position_1 = 93;
+							displaychart(position_1,position_2);
 						}
 						if(position_1==60)
 						{
-							displaychart(83,"-P1-");
+							position_1 = 83;
+							displaychart(position_1,position_2);
 						}
 						if(position_1==13)
 						{
-							displaychart(42,"-P1-");
+							position_1 = 42;
+							displaychart(position_1,position_2);
 						}
-						else{
-							displaychart(position_1,"-P1-");
+						else
+						{
+							displaychart(position_1,position_2);
+
 						}
                         printf("\t\t\t\tDice = %d\n",dice);
 					}
@@ -75,7 +83,7 @@ int main (void)
 					{
 						position_1=position_1-dice;
 						printf("Range exceeded of Player 1.\n");
-						displaychart(position_1,"-P1-");
+						displaychart(position_1,position_2);
 					}
 					printf("Player 2 position is %d\n\n",position_2);
 					break;
@@ -86,42 +94,49 @@ int main (void)
 					if(position_2<101)
 					{
 						// for snakes
-						if(position_2==99)	
+						if(position_2==99)
 						{
-							displaychart(1,"$-P2-");
+							position_2 = 1;
+							displaychart(position_1,position_2);
 						}
-						if(position_2==65)	
+						if(position_2==65)
 						{
-							displaychart(40,"-P2-");
+							position_2 = 40;
+							displaychart(position_1,position_2);
 						}
-						if(position_2==25)	
+						if(position_2==25)
 						{
-							displaychart(9,"-P2-");
+							position_2 = 9;
+							displaychart(position_1,position_2);
 						}
 						// for ladders
-						if(position_2==70)	
+						if(position_2==70)
 						{
-							displaychart(93,"-P2-");
+							position_2 = 93;
+							displaychart(position_1,position_2);
 						}
-						if(position_2==60)	
+						if(position_2==60)
 						{
-							displaychart(83,"-P2-");
+							position_2 = 83;
+							displaychart(position_1,position_2);
 						}
-						if(position_2==13) 
+						if(position_2==13)
 						{
-							displaychart(42,"-P2-");
+							position_2 = 42;
+							displaychart(position_1,position_2);
 						}
 						else
 						{
-							displaychart(position_2,"-P2-");
+							displaychart(position_1,position_2);
+
 						}
-						printf("\t\t\t\tDice = %d\n",dice);
+                        printf("\t\t\t\tDice = %d\n",dice);
 					}
 					else
 					{
 						position_2=position_2-dice;
 						printf("Range exceeded of Player 2.\n");
-						displaychart(position_2,"-P2-");
+						displaychart(position_1,position_2);
 					}
 					printf("Player 1 position is %d\n\n",position_1);
 					break;
