@@ -3,6 +3,12 @@
 void displaychart(int position,char player[2])
 {
     int i,j,x,y,row=0,table;
+		if(position==100)
+		{
+			printf("Congratulations!!!!!! \n\nPlayer %s wins\n",player);
+			scanf("%*s");
+			exit(0);
+		}
 	
     for(i=10;i>0;i--)
 	{
@@ -16,7 +22,9 @@ void displaychart(int position,char player[2])
 				
 
 				if(position==table)
-					printf("%s\t",player);
+				{
+					printf("%s %s\t",player,player);
+				}
 				else
 				printf("%d\t",table);
 
@@ -31,7 +39,7 @@ void displaychart(int position,char player[2])
 				table=(i*j)+(x*y--);
 
 				if(position==table)
-					printf("%s\t",player);
+					printf("%s %s\t",player,player);
 				else
 					printf("%d\t",table);
 			}
