@@ -25,9 +25,9 @@ void displaychart(int position_1, int position_2)
 				table = (i * j) + (x * y++);
 
 				if (position_1 == table)
-					printf("P1\t");
+					printf("*P1*\t");
 				else if (position_2 == table)
-					printf("P2\t");
+					printf("*P2*\t");
 				else
 					printf("%d\t", table);
 			}
@@ -40,9 +40,9 @@ void displaychart(int position_1, int position_2)
 			{
 				table = (i * j) + (x * y--);
 				if (position_1 == table)
-					printf("P1\t");
+					printf("*P1*\t");
 				else if (position_2 == table)
-					printf("P2\t");
+					printf("*P2*\t");
 				else
 					printf("%d\t", table);
 			}
